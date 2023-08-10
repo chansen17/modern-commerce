@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export default function Product({ product, option, delay }) {
     console.log('option: ', option);
     return (
-        <motion.div initial={{ opacity: .5, y: -10 }} whileInView={{ opacity: 1, y: 0}} transition={{ duration: .5, delay: delay * 0.05 }} className='relative w-full overflow-hidden h-80 sm:h-96 xl:h-[500px] group rounded-2xl'>
+        <motion.div initial={{ opacity: 0, y: -10 }} whileInView={{ opacity: 1, y: 0}} transition={{ duration: .5, delay: delay * 0.05 }} className='relative w-full overflow-hidden h-80 sm:h-96 xl:h-[500px] group rounded-2xl'>
             {product?.sale === true && (
                 <div className="absolute px-3 py-2 text-sm font-bold text-red-500 bg-gray-100 rounded-full top-3 left-3">Flash Sale 🔥</div>
             )}
